@@ -11,7 +11,7 @@ import { UserRoles } from '../../auth/decorators/roles.decorator';
 import { Roles } from '../../auth/enum/role.enum';
 import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard';
 import { RolesGuard } from '../../auth/guards/roles.guard';
-import { ApiBearerAuth, ApiHeader, ApiQuery, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiQuery, ApiTags } from '@nestjs/swagger';
 import { Task } from '../../../db/entities/task.entity';
 
 @ApiTags('Admin Module - Tasks Controller')
