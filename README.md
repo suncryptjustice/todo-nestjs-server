@@ -135,8 +135,10 @@ Additionaly you can delete all Swagger Decorators from the app.
 
 ---
 
-Each request to private api point must include Authorization header which you can get in [Login method response](#login_endpoint).  
+Each request to private api point must include Authorization header which you can get in [Login method response](#login_endpoint).
 Example: `Authorization: Bearer <token>`
+
+Each `POST / UPDATE` Request require Content-Type header - `Content-type: application/json`
 
 1. Create Task
 
@@ -335,6 +337,7 @@ const getTodos = async (token: string): Promise<Todo[]> => {
   try {
     const response = await fetch('/api/admin/tasks', {
       headers: {
+        'Content-type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
     });
@@ -380,4 +383,4 @@ This is open source project made for help people make their portfolio web sites.
 
 ## License
 
-This ptoject is [MIT licensed](LICENSE).
+This project is [MIT licensed](LICENSE).
